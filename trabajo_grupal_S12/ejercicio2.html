@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Ejercicio 1</title>
+  <script src="script.js"></script>
+</head>
+
+<body style="background-color: antiquewhite">
+  <a href="index.html" method="post">
+    <button type="menu">Inicio</button>
+  </a>
+  <h1>Ejercicio 2:</h1>
+  <table border="1">
+    <tr>
+      <td>Segundos</td>
+      <td><input type="text" id="txtSegundos" /></td>
+    </tr>
+    <tr>
+      <td><button onclick="segundosN()">Respuesta</button></td>
+      <td>
+        <textarea name="respuesta" id="txtRespuesta" cols="30" rows="10"></textarea>
+      </td>
+    </tr>
+  </table>
+
+  <script type="text/javascript">
+    function segundosN() {
+      const seconds = document.getElementById("txtSegundos").value;
+      var numdays = Math.floor(seconds / 86400);
+      var numhours = Math.floor((seconds % 86400) / 3600);
+      var numminutes = Math.floor(((seconds % 86400) % 3600) / 60);
+      var numseconds = ((seconds % 86400) % 3600) % 60;
+
+      console.log(
+        numdays +
+        " dias " +
+        numhours +
+        " horas " +
+        numminutes +
+        " minutos " +
+        numseconds +
+        " segundos"
+      );
+
+      document.getElementById("txtRespuesta").value =
+        numdays +
+        " dias " +
+        numhours +
+        " horas " +
+        numminutes +
+        " minutos " +
+        numseconds +
+        " segundos";
+    }
+  </script>
+</body>
+
+</html>

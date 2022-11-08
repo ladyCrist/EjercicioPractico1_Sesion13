@@ -1,0 +1,14 @@
+@import url("./style_2.css");
+
+.container {
+  padding-left: 3rem;
+  padding-right: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(221, 158, 158);
+}
+h1 {
+  text-align: center;
+}

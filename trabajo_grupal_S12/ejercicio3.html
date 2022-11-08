@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+      <title>Ejercicio 1</title>
+      <script src="script.js"></script>
+</head>
+
+<body style="background-color: rgb(168, 221, 107)">
+      <a href="index.html" method="post">
+            <button type="menu">Inicio</button>
+      </a>
+
+      <h1>Ejercicio 3:</h1>
+      <h1>Promedio ponderados </h1>
+      <p>Promedio Curso 1 (Cred:5): <input type="text" id="P1"></p>
+      <p>Promedio Curso 2 (Cred:4): <input type="text" id="P2"></p>
+      <p>Promedio Curso 3 (Cred:1): <input type="text" id="P3"></p>
+      <p>Promedio Curso 4 (Cred:2): <input type="text" id="P4"></p>
+      <p><input type="button" value="calcular" onclick="CalcularPromedio()"></p>
+      <p id="promedio"></p>
+
+      <script type="text/javascript">
+            function CalcularPromedio() {
+                  var p1 = document.getElementById("P1").value;
+                  var p2 = document.getElementById("P2").value;
+                  var p3 = document.getElementById("P3").value;
+                  var p4 = document.getElementById("P4").value;
+                  var prom =
+                        (5 * parseFloat(p1) +
+                              4 * parseFloat(p2) +
+                              parseFloat(p3) +
+                              2 * parseFloat(p4)) /
+                        12;
+                  document.getElementById("promedio").innerHTML = prom;
+            }
+      </script>
+</body>
+
+</html>

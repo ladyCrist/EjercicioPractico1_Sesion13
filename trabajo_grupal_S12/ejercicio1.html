@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Ejercicio 1</title>
+  <script src="script.js"></script>
+</head>
+
+<body style="background-color: aqua">
+  <a href="index.html" method="post">
+    <button type="menu">Inicio</button>
+  </a>
+  <h1>Ejercicio 1:</h1>
+  <table border="1">
+    <tr>
+      <td>
+        Cantidad en Soles:
+      </td>
+      <td>
+        <input id="soles" placeholder="Ingrese la cantidad en Soles ...">
+      </td>
+    </tr>
+  </table>
+  <button type="button" onclick="programa1()">Ejecutar</button>
+  <table>
+    <tr>
+      <td>
+        Billetes de S/50:
+      </td>
+      <td>
+        <textarea id="billetes50"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Billetes de S/20:
+      </td>
+      <td>
+        <textarea id="billetes20"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Billetes de S/10:
+      </td>
+      <td>
+        <textarea id="billetes10"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Billetes de S/5:
+      </td>
+      <td>
+        <textarea id="billetes5"></textarea>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        Billetes de S/1:
+      </td>
+      <td>
+        <textarea id="billetes1"></textarea>
+      </td>
+    </tr>
+  </table>
+
+  <script type="text/javascript">
+    function programa1() {
+      const soles = document.getElementById("soles").value;
+      var billetes50 = Math.trunc(soles / 50);
+      r = soles % 50;
+      var billetes20 = Math.trunc(r / 20);
+      r = r % 20;
+      var billetes10 = Math.trunc(r / 10);
+      r = r % 10;
+      var billetes5 = Math.trunc(r / 5);
+      r = r % 5;
+      var billetes1 = Math.trunc(r / 1);
+      r = r % 1;
+
+      document.getElementById("billetes50").innerHTML = billetes50;
+      document.getElementById("billetes20").innerHTML = billetes20;
+      document.getElementById("billetes10").innerHTML = billetes10;
+      document.getElementById("billetes5").innerHTML = billetes5;
+      document.getElementById("billetes1").innerHTML = billetes1;
+    }
+  </script>
+</body>
+
+</html>
